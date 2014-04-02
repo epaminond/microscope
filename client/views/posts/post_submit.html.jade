@@ -1,0 +1,17 @@
+template(name='postSubmit')
+  form.main
+    div.control-group
+      label.control-label(for='url') URL
+      div.controls
+        input(name='url', type='text', value='', placeholder='Your URL')
+    div.control-group
+      label.control-label(for='title') Title
+      div.controls
+        input(name='title', type='text', value='', placeholder='Name your post')
+    div.control-group
+      label.control-label(for='message') Message
+      div.controls
+        textarea(name='message', type='text', value='')
+    div.control-group
+      div.controls
+        input.btn.btn-primary(type='submit', value='Submit')

@@ -1,0 +1,11 @@
+template(name='header')
+  header.navbar
+    .navbar-inner
+      a.brand(href="{{pathFor 'postsList'}}") Microscope
+      ul.nav
+        if currentUser
+          li
+            a(href="{{pathFor 'postSubmit'}}") Submit Post
+      ul.nav.pull-right
+        li
+          +loginButtons
