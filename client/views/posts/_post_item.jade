@@ -4,4 +4,8 @@ template(name='postItem')
       h3
         a(href=url)= title
         span= domain
+      p submitted by {{author}}
+        br
+        if ownPost
+          a(href= "{{pathFor 'postEdit'}}") Edit
     a.discuss.btn(href= "{{pathFor 'postPage'}}") Discuss

@@ -3,6 +3,9 @@ Router.map ->
   @.route 'postPage',
     path: '/posts/:_id',
     data: -> Session.set 'currentPostId', @.params._id
+  @.route 'postEdit',
+    path: '/posts/:_id/edit',
+    data: -> Session.set 'currentPostId', @.params._id
   @.route 'postSubmit', path: '/submit'
 
 Router.configure
