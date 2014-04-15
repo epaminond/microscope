@@ -5,5 +5,6 @@ template(name='errors')
 
 template(name='error')
   .alert.alert-error
-    button.close(type="button" data-dismiss="alert") &times;
-    = message
+    button.close(type="button" data-dismiss="alert")
+      &times;
+    {{message}}

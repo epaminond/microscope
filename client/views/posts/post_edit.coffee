@@ -9,7 +9,7 @@ Template.postEdit.events
       url: $(e.target).find('[name=url]').val()
       title: $(e.target).find('[name=title]').val()
     Posts.update currentPostId, {$set: postProperties}, (error)->
-      if error then alert(error.reason) else
+      if error then throwError(error.reason) else
         Router.go 'postPage', _id: currentPostId
   'click .delete': (e)->
     e.preventDefault();

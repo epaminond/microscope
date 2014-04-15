@@ -12,6 +12,6 @@ Template.postSubmit.events
       if error?
         throwError error.reason
         if error.error == 302
-          Router.go 'postPage'
+          Router.go 'postPage', _id: error.details
       else
         Router.go 'postPage', _id: id
