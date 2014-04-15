@@ -2,10 +2,10 @@ if Posts.find().count() == 0
   now = new Date().getTime()
 
   # create two users
-  tomId = Meteor.users.insert profile: { name: 'Tom Coleman' }
-  tom   = Meteor.users.findOne tomId
+  tomId   = Meteor.users.insert profile: { name: 'Tom Coleman' }
+  tom     = Meteor.users.findOne tomId
   sachaId = Meteor.users.insert profile: { name: 'Sacha Greif' }
-  sacha = Meteor.users.findOne sachaId
+  sacha   = Meteor.users.findOne sachaId
 
   telescopeId = Posts.insert
     title: 'Introducing Telescope'
