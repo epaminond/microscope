@@ -13,6 +13,7 @@ if Posts.find().count() == 0
     author: sacha.profile.name
     url: 'http://sachagreif.com/introducing-telescope/'
     submitted: now - 7 * 3600 * 1000
+    commentsCount: 2
 
   Comments.insert
     postId: telescopeId
@@ -29,16 +30,12 @@ if Posts.find().count() == 0
     body: 'You sure can Tom!'
 
   Posts.insert
-    title: 'Introducing Telescope'
-    author: 'Sacha Greif'
-    url: 'http://sachagreif.com/introducing-telescope/'
-
-  Posts.insert
     title: 'Meteor'
     userId: tom._id
     author: tom.profile.name
     url: 'http://meteor.com'
     submitted: now - 10 * 3600 * 1000
+    commentsCount: 0
 
   Posts.insert
     title: 'The Meteor Book'
@@ -46,4 +43,5 @@ if Posts.find().count() == 0
     author: tom.profile.name
     url: 'http://themeteorbook.com'
     submitted: now - 12 * 3600 * 1000
+    commentsCount: 0
 
