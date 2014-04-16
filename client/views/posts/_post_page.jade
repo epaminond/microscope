@@ -5,3 +5,6 @@ template(name='postPage')
     ul.comments
       each comments
         +comment
+
+    if currentUser
+      +commentSubmit
