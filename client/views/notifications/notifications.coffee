@@ -4,5 +4,8 @@ Template.notifications.helpers
   notificationCount: ->
     Notifications.find({userId: Meteor.userId(), read: false}).count()
 
+Template.notification.helpers
+  notificationPostPath: -> Router.routes.postPage.path _id: this.postId
+
 Template.notification.events
   'click a': -> Notifications.update @._id, {$set: {read: true}}
