@@ -11,3 +11,5 @@ accounts-password
 spin
 jade
 iron-router
+paginated-subscription
+iron-router-progress

@@ -5,7 +5,9 @@
       "accounts-ui-bootstrap-dropdown": {},
       "spin": {},
       "jade": {},
-      "iron-router": {}
+      "iron-router": {},
+      "paginated-subscription": {},
+      "iron-router-progress": {}
     },
     "packages": {
       "accounts-ui-bootstrap-dropdown": {
@@ -27,6 +29,16 @@
         "git": "https://github.com/EventedMind/iron-router.git",
         "tag": "v0.7.1",
         "commit": "d1ffb3f06ea4c112132b030f2eb1a70b81675ecb"
+      },
+      "paginated-subscription": {
+        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
+        "tag": "v0.1.2",
+        "commit": "35e0c6112df2b4cfeb60b559276a93cac5ee2dd6"
+      },
+      "iron-router-progress": {
+        "git": "https://github.com/Multiply/iron-router-progress.git",
+        "tag": "v0.3.1",
+        "commit": "3f7900feb4bb70a1289b39a1fdcd1f438c0335b3"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

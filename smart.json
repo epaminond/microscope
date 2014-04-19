@@ -3,6 +3,8 @@
     "accounts-ui-bootstrap-dropdown": {},
     "spin": {},
     "jade": {},
-    "iron-router": {}
+    "iron-router": {},
+    "paginated-subscription": {},
+    "iron-router-progress": {}
   }
 }
