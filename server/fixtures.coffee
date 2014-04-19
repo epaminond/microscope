@@ -45,3 +45,11 @@ if Posts.find().count() == 0
     submitted: now - 12 * 3600 * 1000
     commentsCount: 0
 
+  for i in [0...10]
+    Posts.insert
+      title: 'Test post #' + i
+      author: sacha.profile.name
+      userId: sacha._id
+      url: 'http://google.com/?q=test-' + i
+      submitted: now - i * 3600 * 1000
+      commentsCount: 0
