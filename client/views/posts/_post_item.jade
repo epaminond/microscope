@@ -5,8 +5,8 @@ template(name='postItem')
       h3
         a(href=url)= title
         span= domain
-      p {{votes}} Votes, submitted by {{author}}, 
-        a(href="{{pathFor 'postPage'}}") {{commentsCount}} comments
+      p {{pluralize votes "Vote"}}, submitted by {{author}}, 
+        a(href="{{pathFor 'postPage'}}") {{pluralize commentsCount 'comment'}}
         if ownPost
           a(href= "{{pathFor 'postEdit'}}") Edit
     a.discuss.btn(href= "{{pathFor 'postPage'}}") Discuss
