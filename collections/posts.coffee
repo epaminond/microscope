@@ -31,15 +31,7 @@ Meteor.methods
 
   upvote: (postId)->
     user = Meteor.user()
-    # post = Posts.findOne(postId)
     throw new Meteor.Error(401, "You need to login to upvote") if (!user)
-    # throw new Meteor.Error(422, 'Post not found') if (!post)
-    # if _.include(post.upvoters, user._id)
-    #   throw new Meteor.Error(422, 'Already upvoted this post')
-
-    # Posts.update post._id,
-    #   $addToSet: {upvoters: user._id}
-    #   $inc:      {votes: 1}
 
     Posts.update {
       _id: postId
