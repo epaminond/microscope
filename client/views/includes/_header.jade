@@ -1,13 +1,22 @@
 template(name='header')
   header.navbar
     .navbar-inner
-      a.brand(href="{{pathFor 'postsList'}}") Microscope
-      ul.nav
-        if currentUser
+      a.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.brand(href="{{pathFor 'bestPosts'}}") Microscope
+      .nav-collapse.collapse
+        ul.nav
+          li(class="{{activeRouteClass 'home' 'newPosts'}}")
+            a(href="{{pathFor 'newPosts'}}") New
+          li(class="{{activeRouteClass 'bestPosts'}}")
+            a(href="{{pathFor 'bestPosts'}}") Best
+          if currentUser
+            li(class="{{activeRouteClass 'postSubmit'}}")
+              a(href="{{pathFor 'postSubmit'}}") Submit Post
+            li.dropdown
+              +notifications
+        ul.nav.pull-right
           li
-            a(href="{{pathFor 'postSubmit'}}") Submit Post
-        li.dropdown
-          +notifications
-      ul.nav.pull-right
-        li
-          +loginButtons
+            +loginButtons

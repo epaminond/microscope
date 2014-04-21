@@ -11,15 +11,15 @@ Template.bestPosts.helpers
 Template.postsList.helpers
   posts: ->
     Posts.find {},
-      sort:  @.sort
-      limit: @.handle.limit()
+      sort:  @sort
+      limit: @handle.limit()
 
   postsReady: -> @.handle.ready()
 
   allPostsLoaded: ->
-    @.handle.ready() && Posts.find().count() < @.handle.loaded()
+    @handle.ready() && Posts.find().count() < @handle.loaded()
 
 Template.postsList.events
   'click .load-more': (event)->
     event.preventDefault()
-    @.handle.loadNextPage()
+    @handle.loadNextPage()
