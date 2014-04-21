@@ -1,5 +1,7 @@
 Router.map ->
-  @.route 'postsList', path: '/'
+  @.route 'bestPosts', path: '/'
+  @.route 'bestPosts', path: '/best'
+  @.route 'newPosts', path: '/new'
   @.route 'postPage',
     path: '/posts/:_id',
     data: -> Session.set 'currentPostId', @.params._id
