@@ -5,6 +5,7 @@
     "jade": {},
     "iron-router": {},
     "paginated-subscription": {},
-    "iron-router-progress": {}
+    "iron-router-progress": {},
+    "fast-render": {}
   }
 }

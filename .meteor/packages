@@ -13,3 +13,4 @@ jade
 iron-router
 paginated-subscription
 iron-router-progress
+fast-render

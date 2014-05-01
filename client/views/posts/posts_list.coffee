@@ -13,6 +13,13 @@ Template.postsList.helpers
     Posts.find {},
       sort:  @sort
       limit: @handle.limit()
+  postsWithRank: ->
+    i = 0
+    options = { sort: @sort, limit: @handle.limit() }
+    Posts.find({}, options).map (post)->
+      post._rank = i
+      i += 1
+      post
 
   postsReady: -> @.handle.ready()
 

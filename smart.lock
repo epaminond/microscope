@@ -7,7 +7,8 @@
       "jade": {},
       "iron-router": {},
       "paginated-subscription": {},
-      "iron-router-progress": {}
+      "iron-router-progress": {},
+      "fast-render": {}
     },
     "packages": {
       "accounts-ui-bootstrap-dropdown": {
@@ -22,8 +23,8 @@
       },
       "jade": {
         "git": "https://github.com/mquandalle/meteor-jade.git",
-        "tag": "v0.2.1",
-        "commit": "969fc3dd0adbb15304e3e13c3e27260398d89503"
+        "tag": "v0.2.2",
+        "commit": "0391abab7d592b17ff74d9b9beaa721051970729"
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
@@ -39,6 +40,11 @@
         "git": "https://github.com/Multiply/iron-router-progress.git",
         "tag": "v0.3.1",
         "commit": "3f7900feb4bb70a1289b39a1fdcd1f438c0335b3"
+      },
+      "fast-render": {
+        "git": "https://github.com/arunoda/meteor-fast-render.git",
+        "tag": "v0.2.4",
+        "commit": "160a64bd61792f53a7c8848c5e979a953be13564"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

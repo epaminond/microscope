@@ -6,7 +6,7 @@ template(name='bestPosts')
 
 template(name='postsList')
   .posts
-    each posts
+    each postsWithRank
       +postItem
     if postsReady
       unless allPostsLoaded
