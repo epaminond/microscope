@@ -33,8 +33,8 @@
       },
       "paginated-subscription": {
         "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
-        "tag": "v0.1.2",
-        "commit": "35e0c6112df2b4cfeb60b559276a93cac5ee2dd6"
+        "tag": "v0.2.0",
+        "commit": "0ac0fede45bbc87003f13363f7bf50dfb4102cf5"
       },
       "iron-router-progress": {
         "git": "https://github.com/Multiply/iron-router-progress.git",
