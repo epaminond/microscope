@@ -1,0 +1,14 @@
+template(name='postItem')
+  //- Workaround as dynamic attributes don't work in jade for now
+  //- .post($dyn=attributes)
+  div(class=attributes_class style=attributes_style)
+    a(href="#", class="upvote btn {{upvotedClass}}") ⬆
+    .post-content
+      h3
+        a(href=url)= title
+        span= domain
+      p {{pluralize votes "Vote"}}, submitted by {{author}}, 
+        a(href="{{pathFor 'postPage'}}") {{pluralize commentsCount 'comment'}} 
+        if ownPost
+          a(href= "{{pathFor 'postEdit'}}") Edit
+    a.discuss.btn(href= "{{pathFor 'postPage'}}") Discuss

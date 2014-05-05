@@ -13,8 +13,8 @@ Template.postItem.helpers
       'btn-primary upvoteable'
     else
       'disabled'
-  attributes: (post)->
-    post = _.extend({}, Positions.findOne(postId: post._id), post)
+  attributes: (obj)->
+    post = _.extend({}, Positions.findOne(postId: obj._id), obj)
     newPosition = post._rank * POST_HEIGHT
     attributes = {}
     if _.isUndefined(post.position)

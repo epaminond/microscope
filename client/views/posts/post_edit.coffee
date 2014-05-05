@@ -12,7 +12,7 @@ Template.postEdit.events
       if error then throwError(error.reason) else
         Router.go 'postPage', _id: currentPostId
   'click .delete': (e)->
-    e.preventDefault();
+    e.preventDefault()
     if confirm "Delete this post?"
       currentPostId = Session.get 'currentPostId'
       Posts.remove currentPostId
