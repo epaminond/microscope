@@ -1,3 +1,6 @@
+Meteor.publish 'posts', (options)->
+  Posts.find {}, options
+
 Meteor.publish 'newPosts', (limit)->
   Posts.find {},
     sort:
@@ -13,4 +16,4 @@ Meteor.publish 'topPosts', (limit)->
 
 Meteor.publish 'singlePost', (id)-> id && Posts.find(id)
 Meteor.publish 'comments', (postId)-> Comments.find postId: postId
-Meteor.publish 'notifications', -> Notifications.find({userId: @.userId})
+Meteor.publish 'notifications', -> Notifications.find({userId: @userId})

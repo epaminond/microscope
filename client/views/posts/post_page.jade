@@ -1,10 +1,11 @@
 template(name='postPage')
-  with currentPost
-    +postItem
+  +postItem
 
-    ul.comments
-      each comments
-        +comment
+  ul.comments
+    each comments
+      +comment
 
-    if currentUser
-      +commentSubmit
+  if currentUser
+    +commentSubmit
+  else
+    p Please log in to leave a comment.

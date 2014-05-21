@@ -22,7 +22,8 @@ Template.postItem.helpers
     else
       delta = post.position - newPosition
       attributes.style = "top: " + delta + "px"
-      attributes.class = "post animate"  if delta is 0
+      attributes.class = "post"
+      attributes.class = attributes.class + " animate"  if delta is 0
     Meteor.setTimeout ->
       Positions.upsert {postId: post._id}, {$set: {position: newPosition}}
     attributes

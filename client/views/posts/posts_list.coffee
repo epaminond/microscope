@@ -14,19 +14,13 @@ Template.postsList.helpers
       sort:  @sort
       limit: @handle.limit()
   postsWithRank: ->
-    i = 0
-    options = { sort: @sort, limit: @handle.limit() }
-    Posts.find({}, options).map (post)->
-      post._rank = i
-      i += 1
-      post
+    if @posts?
+      @posts.rewind()
+      @posts.map (post, index, cursor)->
+        post._rank = index
+        post
 
   postsReady: -> @.handle.ready()
 
   allPostsLoaded: ->
     @handle.ready() && Posts.find().count() < @handle.loaded()
-
-Template.postsList.events
-  'click .load-more': (event)->
-    event.preventDefault()
-    @handle.loadNextPage()
