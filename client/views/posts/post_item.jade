@@ -1,7 +1,7 @@
 template(name='postItem')
   //- Workaround as dynamic attributes don't work in jade for now
   //- .post($dyn=attributes)
-  div(class=attributes_class style=attributes_style)
+  .post(class=attributes.class style=attributes.style)
     a(href="#", class="upvote btn {{upvotedClass}}") ⬆
     .post-content
       h3

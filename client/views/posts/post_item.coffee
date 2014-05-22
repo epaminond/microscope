@@ -13,8 +13,8 @@ Template.postItem.helpers
       'btn-primary upvoteable'
     else
       'disabled'
-  attributes: (obj)->
-    post = _.extend({}, Positions.findOne(postId: obj._id), obj)
+  attributes: ->
+    post = _.extend({}, Positions.findOne(postId: @_id), @)
     newPosition = post._rank * POST_HEIGHT
     attributes = {}
     if _.isUndefined(post.position)
@@ -22,15 +22,10 @@ Template.postItem.helpers
     else
       delta = post.position - newPosition
       attributes.style = "top: " + delta + "px"
-      attributes.class = "post"
-      attributes.class = attributes.class + " animate"  if delta is 0
+      attributes.class = "post animate"  if delta is 0
     Meteor.setTimeout ->
       Positions.upsert {postId: post._id}, {$set: {position: newPosition}}
     attributes
-
-  # Workaround functions as dynamic attributes don't work in jade for now
-  attributes_class: -> Template.postItem.attributes(@).class
-  attributes_style: -> Template.postItem.attributes(@).style
 
 Template.postItem.events
   'click .upvoteable': (event)->

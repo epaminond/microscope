@@ -23,8 +23,8 @@
       },
       "jade": {
         "git": "https://github.com/mquandalle/meteor-jade.git",
-        "tag": "v0.2.2",
-        "commit": "0391abab7d592b17ff74d9b9beaa721051970729"
+        "tag": "v0.2.3",
+        "commit": "38220544108cdc30e2e53f40481dce0b594d6f31"
       },
       "iron-router": {
         "git": "https://github.com/EventedMind/iron-router.git",
